@@ -2,13 +2,13 @@
 ## DS23 - Projektmanagement - Praxisprojekt bei Valentin Zacharias --> Abfrage zur Einschätzung für eine Alzheimer-Wahrscheinlichkeit
 
 # Ziel:
-Das Ziel des Projektes ist es mittels eines Datensatzes von Kaggle ein Tool zu bauen um die Gefährdung einer Erkrankung an Alzheimer einzuschätzen.
+Das Ziel des Projektes ist es mittels eines Datensatzes von Kaggle ein Tool zu bauen um die Gefährdung einer Erkrankung an Alzheimer einzuschätzen. </br></br></br></br>
 
 # Datensatz:
 https://www.kaggle.com/datasets/ankushpanday1/alzheimers-prediction-dataset-global/data
 
 # Hugging-Face-Projekt:
-https://huggingface.co/DS23-KI-Projekt
+https://huggingface.co/DS23-KI-Projekt </br></br></br></br>
 
 # Verzeichnisstruktur:
 ## Vorbereitung
