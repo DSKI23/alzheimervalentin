@@ -10,4 +10,9 @@ https://www.kaggle.com/datasets/ankushpanday1/alzheimers-prediction-dataset-glob
 # Hugging-Face-Projekt:
 https://huggingface.co/DS23-KI-Projekt
 
-In dem Verzeichnis "Vorbereitung" sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset , sowie den Split (randomseed69) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split.
+# Verzeichnisstruktur:
+## Vorbereitung
+In diesem Verzeichnis sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset , sowie den Split (randomseed69) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben.
+
+## Data Exploration
+Hier werden Notebooks zur Visualisierung und Untersuchung des Datensatzes angelegt.
