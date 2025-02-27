@@ -47,5 +47,5 @@ Hier werden Notebooks zur Visualisierung und Untersuchung des Datensatzes angele
 ## DataCleaning
 Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben. 
 
-##Modell
+## Modell
 ML-Modell (Random Forest Classifier)
