@@ -13,8 +13,6 @@ dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
 
 df = dataset['train'].to_pandas()
 
-if not os.path.exists('dataset.pkl'):
-    os.makedirs('dataset.pkl')
 
 pd.to_pickle(df, "dataset.pkl") 
 
