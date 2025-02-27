@@ -5,7 +5,7 @@ from datasets import load_dataset
 import pickle
 import pandas as pd
 
-state = os.environ['state']
+state = int(os.environ['state'])
 np.random.seed(state)
 
 huggingface_hub.login(token= os.environ['huggingface_token'])
