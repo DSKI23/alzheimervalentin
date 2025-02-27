@@ -27,9 +27,9 @@ jobs:
             pip install -r requirements.txt
       - name: Run Training
         run: |
-            python load_data.py
-            python train_data.py
-            python upload_data.py
+            python Modell/load_data.py
+            python Modell/train_data.py
+            python Modell/upload_data.py
         env:
           huggingface_token: ${{secrets.huggingface}}
           state: 42
