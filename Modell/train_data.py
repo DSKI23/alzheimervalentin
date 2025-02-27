@@ -29,8 +29,7 @@ rf_model.fit(X_train, y_train)
 y_pred = rf_model.predict(X_test)
 
 
-if not os.path.exists('random_forest_alzheimer'):
-    os.makedirs('random_forest_alzheimer')
+
 
 with open('random_forest_alzheimer.pkl', 'wb') as file:
     pickle.dump(rf_model, file)
