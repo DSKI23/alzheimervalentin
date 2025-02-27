@@ -31,7 +31,10 @@ notebook_login()
 dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
 dataset
 ```
-
+# Installtion von requirements.txt
+```
+!pip install -r "https://raw.githubusercontent.com/DSKI23/alzheimervalentin/refs/heads/main/requirements.txt"
+```
 
 # Verzeichnisstruktur:
 ## Vorbereitung
