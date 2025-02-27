@@ -15,7 +15,7 @@ https://github.com/orgs/DSKI23/projects/1
 
 # Verzeichnisstruktur:
 ## Vorbereitung
-In diesem Verzeichnis sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset , sowie den Split (randomseed69) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben.
+In diesem Verzeichnis sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset , sowie den Split (randomseed42) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben.
 
 ## Data Exploration
 Hier werden Notebooks zur Visualisierung und Untersuchung des Datensatzes angelegt.
