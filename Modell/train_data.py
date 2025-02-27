@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import pickle 
 
-state = os.environ('state')
+state = os.environ['state']
 
 df = pd.read_pickle("dataset.pkl") 
 os.remove("dataset.pkl")
