@@ -17,7 +17,7 @@ https://github.com/orgs/DSKI23/projects/1
 Um mit Google Colab zu arbeiten, muss in den Settings bei https://colab.research.google.com/ das Github-Konto verknüpft werden und der Haken bei "Auf private Repositories und Organisationen zugreifen" gesetzt werden:
 ![image](https://github.com/user-attachments/assets/138466f5-aa1a-4040-94f4-b3a36c95ce32)
 
-# Aufruf des gesplitteten Datasets
+# Import des gesplitteten Datasets in ein Notebook
 ```
 !pip install --upgrade huggingface_hub
 !pip install datasets
