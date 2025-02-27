@@ -3,7 +3,8 @@ import huggingface_hub
 import joblib
 import os
 
-state = os.environ('state')
+state = os.environ['state']
+
 huggingface_hub.login(token= os.environ['huggingface_token'])
 rf_model = RandomForestClassifier(n_estimators=50, random_state=state)
 
