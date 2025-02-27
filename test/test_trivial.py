@@ -5,7 +5,3 @@ def test_dummy():
 
 def test_dummy_false():
     assert False
-
-def test_dummy_error():
-    pri
-    assert True
