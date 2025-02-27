@@ -6,11 +6,11 @@ import os
 state = int(os.environ['state'])
 
 huggingface_hub.login(token= os.environ['huggingface_token'])
-rf_model = RandomForestClassifier(n_estimators=50, random_state=state)
+#rf_model = RandomForestClassifier(n_estimators=50, random_state=state)
 
 # Modell speichern .pkl-Datei
 model_filename = "random_forest_alzheimer.pkl"
-joblib.dump(rf_model, model_filename)
+#joblib.dump(rf_model, model_filename)
 
 # Repository-Name auf Hugging Face (anpassen!)
 hf_repo_name = "DS23-KI-Projekt/KI-Modell"
