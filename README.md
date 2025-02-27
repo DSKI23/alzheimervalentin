@@ -10,6 +10,9 @@ https://www.kaggle.com/datasets/ankushpanday1/alzheimers-prediction-dataset-glob
 # Hugging-Face-Projekt:
 https://huggingface.co/DS23-KI-Projekt </br></br></br></br>
 
+# Projektmanagement / Jira Board
+https://github.com/orgs/DSKI23/projects/1 
+
 # Verzeichnisstruktur:
 ## Vorbereitung
 In diesem Verzeichnis sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset , sowie den Split (randomseed69) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben.
