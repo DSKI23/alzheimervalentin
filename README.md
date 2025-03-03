@@ -54,7 +54,7 @@ ML-Modell (Random Forest Classifier)
 Zuerst haben wir auf der Webseite https://wandb.ai/site/models/ einen akademischen Account erstellt. Für die Bearbeitung haben wir Zhannas Acc verwendet.
 Danach haben wir WandB in unserem neuen Notebook (mit Kommandos !pip install wandb) installiert und mit Zhannas API-Token (mit Kommandos !wandb login) eingeloggt.
 
-Der erwähnte API-Token lautet in unserem Fall: d71291b4e35482d0bb550757cd7c0fe7c7defdfe (variiert natürlich von WandB Konto zu WandB Konto) 
+Der erwähnte API-Token lautet in unserem Fall: (variiert natürlich von WandB Konto zu WandB Konto) 
 
 Die Datei, welche für diesen Prozess verwendet wurde ist unser Trainings Datensatz und ist unter dem folgenden Pfad "DS23-KI-Projekt/alzheimerdataset_split" zu finden.
 Folgende Metrics wurden in unserem Beispiel verwendet: Accuracy, Classification Report und Confusion Matrix.
