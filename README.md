@@ -49,3 +49,46 @@ Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschlie�
 
 ## Modell
 ML-Modell (Random Forest Classifier)
+
+## Hyperparameter Logging (über WandB)
+Zuerst haben wir auf der Webseite https://wandb.ai/site/models/ einen akademischen Account erstellt. Für die Bearbeitung haben wir Zhannas Acc verwendet.
+Danach haben wir WandB in unserem neuen Notebook (mit Kommandos !pip install wandb) installiert und mit Zhannas API-Token (mit Kommandos !wandb login) eingeloggt.
+
+Der erwähnte API-Token lautet in unserem Fall: d71291b4e35482d0bb550757cd7c0fe7c7defdfe (variiert natürlich von WandB Konto zu WandB Konto) 
+
+Die Datei, welche für diesen Prozess verwendet wurde ist unser Trainings Datensatz und ist unter dem folgenden Pfad "DS23-KI-Projekt/alzheimerdataset_split" zu finden.
+Folgende Metrics wurden in unserem Beispiel verwendet: Accuracy, Classification Report und Confusion Matrix.
+
+Mit der Funktion load_data haben wir Features und Labels erstellt.
+
+Die Funktion train_rf trainiert unser ML-Model Random Forest Classifier mit einer bestimmten Anzahl von n_estimators. Der Hyperparameter n_estimators repräsentiert die Anzahl von Bäumen in dem Random Forest Model.
+
+In einer weiteren Funktion namens main haben wir: 
+
+- WandB Projekt initialisiert,
+- das Dataset hochgeladen,
+- die Features und Label eingestellt,
+- das Dataset in Training- und Test-Datei gesplittet,
+- Ergebnisse in WandB geloggt --> Parameters und Hyperparameters.
+
+Hier ein Ausschnitt über die verschiedenen Accuracies über unsere 10 epochs zur Veranschaulichung mit jeweils veränderten Hyperparametern n_estimators:
+
+Epoch 1 | n_estimators=10 | Accuracy=0.6820
+Epoch 2 | n_estimators=20 | Accuracy=0.6946
+Epoch 3 | n_estimators=30 | Accuracy=0.6959
+Epoch 4 | n_estimators=40 | Accuracy=0.6977
+Epoch 5 | n_estimators=50 | Accuracy=0.6974
+Epoch 6 | n_estimators=60 | Accuracy=0.6980
+Epoch 7 | n_estimators=70 | Accuracy=0.6990
+Epoch 8 | n_estimators=80 | Accuracy=0.6986
+Epoch 9 | n_estimators=90 | Accuracy=0.6987
+Epoch 10 | n_estimators=100 | Accuracy=0.6987
+Best model saved with accuracy: 0.6990
+
+Abschließend halten wir das Model mit der höchsten Accuracy fest und speichern es im pickle-Format.
+
+In Terminal kann man den Link zum Statistik finden:
+
+Syncing run RF-Training to Weights & Biases (docs)
+View project at https://wandb.ai/zhannalialko-dhbw-mosbach/alzheimer-rf
+View run at https://wandb.ai/zhannalialko-dhbw-mosbach/alzheimer-rf/runs/zrtxr7o2
