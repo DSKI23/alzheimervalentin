@@ -44,7 +44,7 @@ Für die Ausführung der Notebooks mit google Colab wird die requirements_colab.
 
 2. Bereinigung der Daten, sowie den Split mittels https://github.com/DSKI23/alzheimervalentin/blob/main/DataCleaning/data_cleaning_upload.ipynb
    
-3. Training, Valuierung der Hyperparameter und Upload zu HuggingFace mittels https://github.com/DSKI23/alzheimervalentin/blob/main/Modell/training.ipynb
+3. Training, Logging der Hyperparameter und Upload zu HuggingFace mittels https://github.com/DSKI23/alzheimervalentin/blob/main/Modell/training.ipynb
  
 4. Gradio-Applikation: https://huggingface.co/spaces/DS23-KI-Projekt/alzheimers-screening-assistant
 </br></br></br></br>
