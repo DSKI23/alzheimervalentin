@@ -15,6 +15,6 @@ def test_data_dublicate():
     login(token= os.environ['huggingface_token'])
     dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
     df = dataset["train"].to_pandas()
-    assert df.duplicated().sum() == 0
+    assert len(df)-len(df.drop_duplicates()) == 0
 
 
