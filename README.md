@@ -8,7 +8,7 @@ Das Ziel des Projektes ist es mittels eines Datensatzes von Kaggle ein Tool zu b
 https://www.kaggle.com/datasets/ankushpanday1/alzheimers-prediction-dataset-global/data
 
 # Hugging-Face-Projekt:
-https://huggingface.co/DS23-KI-Projekt 
+https://huggingface.co/DS23-KI-Projekt </br>
 https://github.com/DSKI23/alzheimervalentin/blob/main/Huggingface-ReadME.md --> ReadME für die Gradio-Applikation bei HuggingFace</br></br></br></br>
 
 # Projektmanagement / Jira Board
@@ -33,23 +33,31 @@ dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
 dataset
 ```
 </br></br></br></br>
-# Installtion von requirements.txt
+# Installtion von requirements_colab.txt
+Für die Ausführung der Notebooks mit google Colab wird die requirements_colab.txt-Datei benötigt.
 ```
-!pip install -r "https://raw.githubusercontent.com/DSKI23/alzheimervalentin/refs/heads/main/requirements.txt"
+!pip install -r "https://raw.githubusercontent.com/DSKI23/alzheimervalentin/refs/heads/main/requirements_colab.txt"
 ```
 </br></br></br></br>
+# Ausführungsreihenfolge:
+1. Data Upload zu Huggingface mittels https://github.com/DSKI23/alzheimervalentin/blob/main/Vorbereitung/Upload_to_HF.ipynb
+2. Bereinigung der Daten, sowie den Split mittels https://github.com/DSKI23/alzheimervalentin/blob/main/DataCleaning/data_cleaning_upload.ipynb
+3. 
 # Verzeichnisstruktur:
 ## Vorbereitung
-In diesem Verzeichnis sind zwei Jupyter Notebooks, welche den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset
+In diesem Verzeichnis ist ein Jupyter-Notebook, welches den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset vornimmt.
 
 ## DataExploration
-Hier werden Notebooks zur Visualisierung und Untersuchung des Datensatzes angelegt.
+Hier sind Notebooks zur Visualisierung und Untersuchung des Datensatzes angelegt.
 
 ## DataCleaning
-Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split beschreiben. 
+Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split. 
 
 ## Modell
-ML-Modell (Random Forest Classifier)
+-->Philipp
+
+## test
+Hier wird der Datensatz auf Duplikate und None-Values überprüft.
 
 ## Hyperparameter Logging (über WandB)
 Zuerst haben wir auf der Webseite https://wandb.ai/site/models/ einen akademischen Account erstellt. Für die Bearbeitung haben wir Zhannas Acc verwendet.
