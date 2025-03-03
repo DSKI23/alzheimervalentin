@@ -59,12 +59,15 @@ Hier sind Notebooks zur Visualisierung und Untersuchung des Datensatzes angelegt
 Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschließenden Upload nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset_split. 
 
 ## Modell
--->Philipp
+Erstellung Training und Bewertung eines RFC-Modells anhand der Daten aus HuggingFace. Bewertung wird auf WandB zur Visualisierung hochgeladen. Das Modell wird bei HuggingFace importiert. 
 
 ## test
 Hier wird der Datensatz auf Duplikate und None-Values überprüft.
 
-## Hyperparameter Logging (über WandB)
+# Github Actions
+Mithilfe von Github Actions werden die pytests bei jedem Push ausgeführt. Bei einem Push auf den Main-Branch wird die Modell/training.ipynb ausgeführt. 
+
+# Hyperparameter Logging (über WandB)
 
 1. WandB - Konto erstellen
 Besuche die Website https://wandb.ai/site/models und erstelle unter SIGN UP einen Account, welches man für die Bearbeitung verwendet.
