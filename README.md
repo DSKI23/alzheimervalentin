@@ -60,13 +60,55 @@ Bereinigung der Daten, sowie den Split (randomseed42) des Datasets und anschlie�
 Hier wird der Datensatz auf Duplikate und None-Values überprüft.
 
 ## Hyperparameter Logging (über WandB)
-Zuerst haben wir auf der Webseite https://wandb.ai/site/models/ einen akademischen Account erstellt. Für die Bearbeitung haben wir Zhannas Acc verwendet.
-Danach haben wir WandB in unserem neuen Notebook (mit Kommandos !pip install wandb) installiert und mit Zhannas API-Token (mit Kommandos !wandb login) eingeloggt.
 
-Der erwähnte API-Token lautet in unserem Fall: (variiert natürlich von WandB Konto zu WandB Konto) 
+1. WandB - Konto erstellen
+Besuche die Website https://wandb.ai/site/models und erstelle unter SIGN UP einen Account, welches man für die Bearbeitung verwendet.
+Den generierten API-Token sicher verwahren. Er wird beim Durchlaufen des Codes abgefragt und muss entsprechend eingefügt werden. (Er variiert natürlich von WandB Konto zu WandB Konto) 
 
-Die Datei, welche für diesen Prozess verwendet wurde ist unser Trainings Datensatz und ist unter dem folgenden Pfad "DS23-KI-Projekt/alzheimerdataset_split" zu finden.
-Folgende Metrics wurden in unserem Beispiel verwendet: Accuracy, Classification Report und Confusion Matrix.
+2. WandB Installation und Konfiguration
+Installiere WandB im Notebook mittels !pip install wandb
+Mit folgendem Code wird die Anmeldung auf WandB durchgeführt: !wandb login
+Beachte, dass für !wandb login auch der generierte API Token verwendet werden muss.
+
+3. Lokalität von benötigtem Datensatz
+Es gilt, den Dateipfad zu hinterlegen. Für unser aktuelles Projekt befindet sich der Datensatz unter: DS23-KI-Projekt/alzheimerdataset_split
+
+Die folgenden Metriken werden zur Evaluation des Modells verwendet:
+
+- Accuracy (Genauigkeit des Modells)
+- Classification Report (Präzision, Recall, F1-Score)
+- Confusion Matrix (Matrix zur Fehleranalyse)
+   
+4. Implementierung von Funktionen
+Die Funktion load_data erstellt die Features (X) und Labels (y) aus dem Datensatz.
+Die Funktion train_rf trainiert einen Random Forest Classifier.
+Der Hyperparameter n_estimators gibt im Code die Anzahl der Bäume im Modell an.
+
+In der main-Funktion sollten folgende Schritte abgebildet werden:
+- Initialisierung des WandB-Projekts
+- Laden des Datensatzes
+- Aufteilung in Features (X) und Labels (y)
+- Aufteilung des Datensatzes in Trainings- und Testdaten
+- Training des Modells mit verschiedenen Hyperparametern
+- Logging der Ergebnisse in WandB (Parameter und Hyperparameter)
+
+5. Trainingsprozess
+Das Modell wird mit variierendem n_estimators trainiert. Im Alzheimer Beispiel wählten wir testweise 10.
+
+6. Speichern des Models
+Das Modell mit der höchsten Accuracy wird gespeichert. Nutze hierfür den Befehl import pickle.
+
+7. Visualisierung
+Nach jedem Trainingsdurchlauf kann man in der Terminal Console die Links entnehmen, die eine Weiterleitung an die WandB Webseite mit verschiedenen Metriken darstellen.
+
+
+
+
+
+
+
+
+
 
 Mit der Funktion load_data haben wir Features und Labels erstellt.
 
