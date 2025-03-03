@@ -41,8 +41,13 @@ Für die Ausführung der Notebooks mit google Colab wird die requirements_colab.
 </br></br></br></br>
 # Ausführungsreihenfolge:
 1. Data Upload zu Huggingface mittels https://github.com/DSKI23/alzheimervalentin/blob/main/Vorbereitung/Upload_to_HF.ipynb
+
 2. Bereinigung der Daten, sowie den Split mittels https://github.com/DSKI23/alzheimervalentin/blob/main/DataCleaning/data_cleaning_upload.ipynb
-3. 
+   
+3. Training, Logging der Hyperparameter und Upload zu HuggingFace mittels https://github.com/DSKI23/alzheimervalentin/blob/main/Modell/training.ipynb
+ 
+4. Gradio-Applikation: https://huggingface.co/spaces/DS23-KI-Projekt/alzheimers-screening-assistant
+</br></br></br></br>
 # Verzeichnisstruktur:
 ## Vorbereitung
 In diesem Verzeichnis ist ein Jupyter-Notebook, welches den Upload des Dataset nach https://huggingface.co/datasets/DS23-KI-Projekt/alzheimerdataset vornimmt.
@@ -63,10 +68,9 @@ Hier wird der Datensatz auf Duplikate und None-Values überprüft.
 
 1. WandB - Konto erstellen
 Besuche die Website https://wandb.ai/site/models und erstelle unter SIGN UP einen Account, welches man für die Bearbeitung verwendet.
-Den generierten API-Token sicher verwahren. Er wird beim Durchlaufen des Codes abgefragt und muss entsprechend eingefügt werden. (Er variiert natürlich von WandB Konto zu WandB Konto) 
+Den generierten API-Token sicher verwahren. Er wird beim Durchlaufen des Codes abgefragt und muss entsprechend eingefügt werden.
 
-2. WandB Installation und Konfiguration
-Installiere WandB im Notebook mittels !pip install wandb
+2. WandB Login
 Mit folgendem Code wird die Anmeldung auf WandB durchgeführt: !wandb login
 Beachte, dass für !wandb login auch der generierte API Token verwendet werden muss.
 
@@ -100,46 +104,3 @@ Das Modell mit der höchsten Accuracy wird gespeichert. Nutze hierfür den Befeh
 
 7. Visualisierung
 Nach jedem Trainingsdurchlauf kann man in der Terminal Console die Links entnehmen, die eine Weiterleitung an die WandB Webseite mit verschiedenen Metriken darstellen.
-
-
-
-
-
-
-
-
-
-
-Mit der Funktion load_data haben wir Features und Labels erstellt.
-
-Die Funktion train_rf trainiert unser ML-Model Random Forest Classifier mit einer bestimmten Anzahl von n_estimators. Der Hyperparameter n_estimators repräsentiert die Anzahl von Bäumen in dem Random Forest Model.
-
-In einer weiteren Funktion namens main haben wir: 
-
-- WandB Projekt initialisiert,
-- das Dataset hochgeladen,
-- die Features und Label eingestellt,
-- das Dataset in Training- und Test-Datei gesplittet,
-- Ergebnisse in WandB geloggt --> Parameters und Hyperparameters.
-
-Hier ein Ausschnitt über die verschiedenen Accuracies über unsere 10 epochs zur Veranschaulichung mit jeweils veränderten Hyperparametern n_estimators:
-
-Epoch 1 | n_estimators=10 | Accuracy=0.6820
-Epoch 2 | n_estimators=20 | Accuracy=0.6946
-Epoch 3 | n_estimators=30 | Accuracy=0.6959
-Epoch 4 | n_estimators=40 | Accuracy=0.6977
-Epoch 5 | n_estimators=50 | Accuracy=0.6974
-Epoch 6 | n_estimators=60 | Accuracy=0.6980
-Epoch 7 | n_estimators=70 | Accuracy=0.6990
-Epoch 8 | n_estimators=80 | Accuracy=0.6986
-Epoch 9 | n_estimators=90 | Accuracy=0.6987
-Epoch 10 | n_estimators=100 | Accuracy=0.6987
-Best model saved with accuracy: 0.6990
-
-Abschließend halten wir das Model mit der höchsten Accuracy fest und speichern es im pickle-Format.
-
-In Terminal kann man den Link zum Statistik finden:
-
-Syncing run RF-Training to Weights & Biases (docs)
-View project at https://wandb.ai/zhannalialko-dhbw-mosbach/alzheimer-rf
-View run at https://wandb.ai/zhannalialko-dhbw-mosbach/alzheimer-rf/runs/zrtxr7o2
