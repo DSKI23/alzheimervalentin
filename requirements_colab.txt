@@ -1,1 +1,2 @@
 datasets==3.3.2
+weave==0.51.35
