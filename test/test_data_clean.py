@@ -9,12 +9,12 @@ def test_data_null():
     dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
     df = dataset["train"].to_pandas()
     
-    assert np.sum(df.isna()) == 0
+    assert df.isna().sum() == 0
 
 def test_data_dublicate():
     login(token= os.environ['huggingface_token'])
     dataset = load_dataset("DS23-KI-Projekt/alzheimerdataset_split")
     df = dataset["train"].to_pandas()
-    assert len(df)-len(df.drop_duplicates()) == 0
+    assert len(df.index)-len(df.drop_duplicates().shape[0]) == 0
 
 
