@@ -27,7 +27,7 @@ jobs:
             pip install -r requirements.txt
       - name: Run Training
         run: |
-            jupyter nbconvert --to notebook --execute Modell/RFC.ipynb
+            jupyter execute Modell/RFC.ipynb
         env:
           huggingface_token: ${{secrets.huggingface}}
           state: 42
