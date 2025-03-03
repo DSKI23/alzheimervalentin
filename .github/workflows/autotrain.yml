@@ -27,9 +27,7 @@ jobs:
             pip install -r requirements.txt
       - name: Run Training
         run: |
-            python Modell/load_data.py
-            python Modell/train_data.py
-            python Modell/upload_data.py
+            python jupyter nbconvert --to notebook --execute RFC.ipynb
         env:
           huggingface_token: ${{secrets.huggingface}}
           state: 42
