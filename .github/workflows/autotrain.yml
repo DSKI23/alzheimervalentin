@@ -27,7 +27,8 @@ jobs:
             pip install -r requirements_autorunner.txt
       - name: Run Training
         run: |
-            jupyter execute Modell/RFC.ipynb
+            jupyter execute Modell/training.ipynb
         env:
           huggingface_token: ${{secrets.huggingface}}
+          wandb_api_key: ${{secrets.API_WANDB}}
           state: 42
