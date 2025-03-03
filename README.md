@@ -8,7 +8,8 @@ Das Ziel des Projektes ist es mittels eines Datensatzes von Kaggle ein Tool zu b
 https://www.kaggle.com/datasets/ankushpanday1/alzheimers-prediction-dataset-global/data
 
 # Hugging-Face-Projekt:
-https://huggingface.co/DS23-KI-Projekt </br></br></br></br>
+https://huggingface.co/DS23-KI-Projekt 
+https://github.com/DSKI23/alzheimervalentin/blob/main/Huggingface-ReadME.md --> ReadME für die Gradio-Applikation bei HuggingFace</br></br></br></br>
 
 # Projektmanagement / Jira Board
 https://github.com/orgs/DSKI23/projects/1 
